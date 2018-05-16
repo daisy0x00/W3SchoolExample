@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>小灰灰的HTML&CSS&JavaScriptTest</title>
+
+		<script>
+			function myFunction3(){
+				document.getElementById("demo3").innerHTML = "This is a JavaScript Function";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Example 1</h1>
+		<h1 align = "center">h1之间的文本被显示为标题，比如这个是h1</h1>
+		<h2>我是h2</h2>
+		<h3>我是h3</h3>
+		<h4>我是h4</h4>
+		<h5>我是h5</h5>
+		<h6>我是h6</h6>
+
+		<p>p之间的文本被显示为段落，比如这个 </p>
+		<br/>
+		<hr/>
+		<h1>Example 2</h1>
+
+		<a href = "http://www.w3school.com.cn">This is a link</a>
+		<br/>
+		<hr/>
+		<h1>Example 3</h1>
+		<img src = "images\w3school.jpg" width = "300" height = "142" />
+		<table border = "1">
+		<br/>
+		<hr/>
+		<h1>Example 4</h1>
+
+		<!--This is a comment-->
+		<div style = "color:blue">
+			<h2>HTML属性参考手册</h2>
+			<p>我们的完整的HTML参考手册提供了每个HTML元素可使用的合法属性的完整列表：</p>
+			<p>
+				下面列出了适用于大多数HTML元素的属性
+			</p>
+			<table class = "dataintable">
+				<tr>
+					<th>属性</th>
+					<th>值</th>
+					<th>描述</th>
+				</tr>
+				<tr>
+					<td>class</td>
+					<td>
+						<i>classname</i>
+					</td>
+					<td>规定元素的类名（classname）</td>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td>
+						<i>id</i>
+					</td>
+					<td>规定元素的唯一id</td>
+				</tr>
+				<tr>
+					<td>style</td>
+					<td>
+						<i>style_definition</i>
+					</td>
+					<td>规定元素的行内样式（inline style）</td>
+				</tr>
+				<tr>
+					<td>title</td>
+					<td>
+						<i>text</i>
+					</td>
+					<td>规定元素的额外信息（可在工具提示中显示）</td>
+				</tr>
+			</table>
+		</div>
+		<br/>
+		<hr/>
+		<h1>Example 5</h1>
+		<script>
+			var c1 = 'huihui1';
+			var c2 = 'huihui2';
+			var a1 = "I'm lanlan1"
+			var a2 = "I'm lanlan2"
+			var a3 = "You are plugin";
+
+			document.write(c1 + "<br>")
+			document.write(c2 + "<br>")
+			document.write(a1 + "<br>")
+			document.write(a2 + "<br>")
+			document.write(a3 + "<br>")
+		</script>
+		<br/>
+		<hr/>
+		<h1>Example 6</h1>
+		<button type = "button" onclick = "alert('Welcom!')">点击这里</button>
+
+		<br/>
+		<hr/>
+		<h1>Example 7</h1>
+		<p id = 'demo0'>JavaScript能够改变HTML的元素</p>
+		<script>
+			function myFunction0(){
+				x = document.getElementById("demo0");
+				x.innerHTML = "Hello xiaohuihui!";
+			}
+		</script>
+
+		<button type = "button" onclick = "myFunction0()">点击这里</button>
+
+		<br/>
+		<hr/>
+		<h1>Example 8</h1>
+		<script>
+			function changeImage(){
+				element = document.getElementById('myimage')
+				if (element.src.match("bulbon")){
+					element.src = "images/eg_bulboff.gif";
+				}
+				else{
+					element.src = "images/eg_bulbon.gif";
+				}
+			}
+		</script>
+		
+		<img id = "myimage" onclick = "changeImage()" src = "images/eg_bulboff.gif" />
+		<p>点击灯泡来点亮或熄灭这盏灯</p>
+		<br/>
+		<hr/>
+		<h1>Example 9</h1>
+		<p id ="demo1">JavaScript能够改变HTML元素的样式。</p>
+		<script>
+			function myFunction1(){
+				x1 = document.getElementById("demo1");
+				x1.style.color = "#ff0000";
+			}
+		</script>
+		<button type = "button" onclick = "myFunction1()">点击这里</button>
+
+		<br/>
+		<hr/>
+		<h1>Example 10</h1>
+		<p>请输入数字。如果 输入值不是数字，浏览器会弹出提示框.</p>
+		<input id = "demo2" type = "text">
+
+		<script>
+			function myFunction2(){
+				var x = document.getElementById("demo2").value;
+				if(x =="" || isNaN(x)){
+					alert("Not Numeric");
+				}
+			}
+		</script>
+		<button type = "button" onclick = "myFunction2()">点击这里</button>
+
+		<br/>
+		<hr/>
+		<h1>Example 11</h1>
+
+		<p>JavaScript能够直接写入HTML输出流中：</p>
+
+		<script>
+			document.write("<h1>This is a heading</h1>");
+			document.write("<p>This is a paragraph</p>");
+		</script>
+
+		<p>
+			您只能在HTML输出流中使用<strong>document.write</strong>.如果你在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+		</p>
+
+		<br/>
+		<hr/>
+		<h1>Example 12</h1>
+		<p id = "demo3">A paragraph.</p>
+		<button type = "button" onclick = "myFunction3()">点击这里</button>
+
+		<br/>
+		<hr/>
+		<h1>Example 13</h1>
+		<p id = "demo4">我要变身了</p>
+		<button type = "button" onclick = "myFunction4()">点我就让你变身</button>
+		<p>
+			<b>注释：</b>
+			myFunction4保存在名为"myScript.js"的外部文件中。
+		</p>
+		<script type = "text/javascript" src = "js/myScript.js"></script>
+
+		<br/>
+		<hr/>
+		<h1>Example 14</h1>
+
+		<p id = "demo5">我是p标签里面的内容</p>
+
+		<script>
+			document.getElementById("demo5").innerHTML = "我是script里面的内容 ";
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 15</h1>
+
+		<script>
+			document.write("<p>这是一段JavaScript</p>");
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 16</h1>
+		<p>这是一个段落，p元素里面的内容</p>
+
+		<button onclick = "myFunction5()">别点我，否则后果自负</button>
+
+		<script>
+			function myFunction5(){
+				document.write("你在整个文档加载完成后才执行document.write，所以整个HTML页面消失了")
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 17 </h1>
+
+		<p id = "demo6">A Paragraph.</p>
+		<div id = "myDIV"> A DIV.</div>
+
+		<script>
+			document.getElementById("demo6").innerHTML = "Hello World";
+			document.getElementById("myDIV").innerHTML = "How are you?";
+		</script>
+
+		<br/>
+		<hr/>
+		<h1 id = "myH1">Example 18</h1>
+		<p id = "myP"></p>
+
+		<script>	
+			//输出标题
+			document.getElementById("myH1").innerHTML = "A Special Example 18"
+			//输出段落
+			document.getElementById("myP").innerHTML = "我是通过script输出的"
+		</script>
+
+		<p><b>注释：</b>注释不会被执行。</p>
+
+		<br/>
+		<hr/>
+		<h1>Example 19</h1>
+
+		<p id = "myP1"></p>
+
+		<script>
+			var x = 5;     //声明x并把5赋值给它
+			var y = x + 2;  //声明y并把x + 2赋值给它
+			document.getElementById("myP1").innerHTML = y //把y的值写到myP1
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 20</h1>
+		<script>
+			var x = 2;
+			var y = 7;
+			var z = x + y;
+
+			document.write(x + "<br>");
+			document.write(y + "<br>");
+			document.write(z + "<br>");
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 21</h1>
+		<script>
+			var pi = 3.14;
+			var name = "xiaolanlan";
+			var answer = "Yes I am!";
+
+			document.write(pi + "<br>");
+			document.write(name + "<br>");
+			document.write(answer + "<br>");
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 22</h1>
+
+		<p>点击这里来创建变量，并显示结果。</p>
+
+		<button onclick = "myFunction6()">点击这里</button>
+
+		<p id = "demo7"></p>
+
+		<script>
+			function myFunction6(){
+				var carname = "Volvo";
+				document.getElementById("demo7").innerHTML = carname;
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 23</h1>
+
+		<p>假设y = 5,计算x = y + 2,并显示结果。</p>
+		<button onclick = "myFunction7()">点击这里</button>
+		<p id = "demo8"></p>
+
+		<script>
+			function myFunction7(){
+				var y = 5;
+				var x = y + 2;
+				var demoP = document.getElementById("demo8")
+				demoP.innerHTML = "x = " + x;
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 24</h1>
+		<script>
+			var x1 = 36.00;
+			var x2 = 36;
+			var y = 123e5;
+			var z = 123e-5;
+
+			document.write(x1 + "<br/>")
+			document.write(x2 + "<br/>")
+			document.write(y + "<br/>")
+			document.write(z + "<br/>")
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 25</h1>
+		<script>
+			var i;
+			var cars = new Array();
+			cars[0] = "Audi";
+			cars[1] = "BMW"
+			cars[2] = "Volvo";
+
+			for(i = 0;i < cars.length;i++){
+				document.write(cars[i] + "<br>");
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 26</h1>
+		<script>
+			var person = {
+				firstname : "Bill",
+				lastname  : "Gates",
+				id        : 5566
+			};
+			document.write(person.lastname + "<br/>");
+			document.write(person["lastname"] + "<br/>");
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 27</h1>
+		<script>
+			var person1;
+			var car = "Volvo";
+			document.write(person1 + "<br/>");
+			document.write(car + "<br/>");
+			var car = null
+			document.write(car + "<br/>");
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 28</h1>
+
+		<script>
+			person = new Object();
+			person.firstname = "Bill";
+			person.lastname = "Gates";
+			person.age = 56;
+			person.eyecolor = "blue";
+			document.write(person.firstname + " is " + person.age + " years old.");
+			document.write(" His another name is " + person.lastname + " , and his eyes are  " + person.eyecolor + " .<br> ");
+
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 29</h1>
+		<script>
+			function myFunction8(){
+				alert("Hello World!");
+			}
+		</script>
+		<button onclick = "myFunction8()">点击这里</button>
+
+		<br/>
+		<hr/>
+		<h1>Example 30</h1>
+		<p>点击这个按钮来调用带参数的函数。</p>
+		<button onclick = "myFunction9('Bill Gates','CEO')">
+		点击这个</button>
+		<button onclick = "myFunction9('Bob','Builder')">Bob</button>
+		<button onclick = "myFunction9('huihui',' Fairy')">huihui</button>
+
+		<script>
+			function myFunction9(name,job){
+				alert("Welcome " + name + " , the " + job);
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 31</h1>
+
+		<p>本例调用的函数会执行一个计算，然后返回结果：</p>
+
+		<p id = "demo9"></p>
+		<script>
+			function myFunction10(a,b){
+				return a * b;
+			}
+
+
+			document.getElementById("demo9").innerHTML = myFunction10(4,3);
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 32</h1>
+		<script type = "text/javascript">
+			x = 5 + 5;
+			document.write(x);
+			document.write("<br/>");
+			x = "5" + "5";
+			document.write(x + "<br/>");
+			x = 5 + "5";
+			document.write(x + "<br/>");
+			x = "5" + 5;
+			document.write(x + "<br/>");
+		</script>
+
+		<h3>规则是：</h3>
+		<p>
+			<strong>如果把数字和字符串相加，结果将成为字符串。</strong>
+		</p>
+
+		<br/>
+		<hr/>
+		<h1>Example 33</h1>
+
+		<p>如果时间早于20：00，会获得问候"Good day"。</p>
+
+		<button onclick = "myFunction11()">点击这里</button>
+
+		<p id = "demo10"></p>
+		<script>
+			function myFunction11() {
+				var x = "";
+				var time = new Date().getHours();
+				if (time < 12){
+					x = "Good morning";
+				}
+				else if(time < 20){
+					x = "Good day";
+				}
+				else{
+					x = "Good evening";
+				}
+				document.getElementById("demo10").innerHTML = x;
+			}
+
+		</script>
+		<br/>
+		<hr/>
+		<h1>Example 34</h1>
+
+		<p>点击下面的按钮会显示今天是周几</p>
+		<button onclick = "myFunction12()">点这里</button>
+		<p id = "demo11"></p>
+
+		<script>
+			function myFunction12(){
+				var x;
+				var d = new Date().getDay();
+				switch(d){
+					case 0 :
+						x = "Today it's Sunday";
+						break;
+					case 1:
+						x = "Today it's Monday";
+						break;
+					case 2 :
+						x = "Today it's Tuesday";
+						break;
+					case 3 :
+						x = "Today it's Wednesday";
+						break;
+					case 4 :
+						x = "Today it's Thursday";
+						break;
+					case 5 :
+						x = "Today it's Friday";
+						break;
+					case 6 :
+						x = "Today it's Saturday";
+						break;
+				}
+
+				document.getElementById("demo11").innerHTML = x;
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 35</h1>
+
+		<button onclick = "myFunction13()">点这里</button>
+		<p id = "demo12"></p>
+		<script>
+			function myFunction13(){
+				var x;
+				var d = new Date().getDay();
+				switch (d){
+					case 6:
+						x = "Today it's Saturday";
+						break;
+					case 0:
+						x = "Today it's Sunday";
+						break;
+					default:
+						x = "Looking forward to the Weekend";
+				}
+				document.getElementById("demo12").innerHTML = x;
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 36</h1>
+		<script>
+			cars = ['BMW','Volvo',"Saab","Ford"];
+			for (var i = 0;i < cars.length;i++){
+				document.write(cars[i] + "<br>");
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 37</h1>
+		
+		<p>点击按钮</p>
+		<button onclick = "myFunction14()">我是按钮</button>
+		<p id = "demo13"></p>
+
+		<script>
+			function myFunction14(){
+				var x = "";
+				for(var i = 0;i < 5;i++){
+					x = x + "The number is " + i + "<br>";
+				}
+				document.getElementById("demo13").innerHTML = x;
+
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 38</h1>
+		<script>
+			cars = ["MNN","huihui","lanlan","qiangq"];
+			for (var i = 0,l = cars.length;i < l;i++){
+				document.write(cars[i] + "<br>");
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 39</h1>
+		<script>
+			cars = ["111","222","333","444","555"];
+			var i = 2,len = cars.length;
+			for(; i < len ;i++){
+				document.write(cars[i] + "<br>");
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 40</h1>
+		<script>	
+			w = ["lll",'hhh',"www","ddd","ppp"];
+			var i = 0,len = w.length;
+			for(; i < len; ){
+				document.write(w[i] + "<br>");
+				i++;
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 41</h1>
+
+		<p>点击下面的按钮，循环遍历对象"person"的属性。</p>
+		<button onclick = "myFunction15()">点击这里</button>
+		<p id = "demo14"></p>
+
+		<script>
+			function myFunction15(){
+				var x;
+				var txt = "";
+				var person = {fname:"Bill",lname:"Gates",age:56};
+
+				for( x in person){
+					txt = txt + person[x];
+				}
+				document.getElementById("demo14").innerHTML = txt;
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 42</h1>
+
+		<p>点击按钮，只要i小于5就一直循环代码块。</p>
+		<button onclick = "myFunction16()">点击这里</button>
+		<p id = "demo15"></p>
+
+		<script>
+			function myFunction16(){
+				var x = "",i = 0;
+				while(i < 5){
+					x = x + "The number is " + i + "<br>";
+					i++;
+				}
+				document.getElementById("demo15").innerHTML = x;
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 43</h1>
+
+		<p>点击下面的按钮do while循环</p>
+		<button onclick = "myFunction17()">点击这里</button>
+		<p id = "demo16"></p>
+
+		<script>
+			function myFunction17(){
+				var x = "",i = 0;
+				do{
+					x = x + "The number is " + i + "<br>";
+					i++;
+				}while(i < 5)
+
+				document.getElementById("demo16").innerHTML = x;
+			}
+
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 44</h1>
+
+		<script>
+			cars = ["qq",'ww','ee','rr','tt'];
+			var i = 0;
+			for(; cars[i];){
+				document.write(cars[i] + "<br>");
+				i++;
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 45</h1>
+
+		<script>
+			a = ["zz","cc","vv","bb"];
+			var i = 0;
+			while (a[i]){
+				document.write(a[i] + "<br>");
+				i++
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 46</h1>
+
+		<p>Test Break</p>
+		<button onclick = "myFunction18()">点击这里</button>
+		<p id = "demo17"></p>
+
+		<script>
+			function myFunction18(){
+				var x = "",i = 0;
+				for(i = 0;i < 10;i++){
+					if(i == 3){
+						break;
+					}
+					x = x + "The number is " + i + "<br>";
+				}
+				document.getElementById("demo17").innerHTML = x;
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 47</h1>
+
+		<p>用for循环，该循环会跳过i = 3的步骤</p>
+
+		<button onclick = "myFunction19()">点击这里</button>
+		<p id = "demo18"></p>
+
+
+		<script>
+			function myFunction19(){
+				var x = "",i = 0;
+				for(i = 0;i < 10;i++){
+					if(i == 3){
+						continue;
+					}
+					x = x + "This number is " + i + "<br>";
+				}
+				document.getElementById("demo18").innerHTML = x;
+			}
+
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 48</h1>
+
+		<script>
+			cars = ["aaa","sss","ddd","fff","ggg"];
+			list:{
+				document.write(cars[0] + "<br>");
+				document.write(cars[1] + "<br/>");
+				document.write(cars[2] + "<br>");
+				break list;
+				document.write(cars[3] + "<br>");
+				document.write(cars[4] + "<br>");
+				document.write(cars[5] + "<br>");
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 49</h1>
+
+		<input type = "button" value = "查看消息" onclick = "message()" />
+
+		<script>
+			var txt = "";
+			function message(){
+				try{
+					adddlert("Welcome guest!");
+				}
+				catch(err){
+					txt = "本页有一个错误。\n\n";
+					txt += "错误描述：" + err.message + "\n\n";
+					txt += "点击确定继续。\n\n";
+					alert(txt);
+				}
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example 50</h1>
+
+		<script>
+			function myFunction20(){
+				try{
+					var x = document.getElementById("demo19").value;
+					if(x == "")   throw "值为空";
+					if(isNaN(x))  throw "不是数字";
+					if(x > 10)    throw "太大";
+					if(x < 5)     throw "太小";
+				}
+				catch(err){
+					var y = document.getElementById("mess");
+					y.innerHTML = "错误：" + err + "。";
+				}
+			}
+		</script>
+
+		<p> 请输入5到10之间的数字：</p>
+		<input id = "demo19" type = "text">
+		<button type = "button" onclick = "myFunction20()">输入测试值</button>
+		<p id = "mess"></p>
+
+		<br/>
+		<hr/>
+		<h1>Example 51 必填验证</h1>
+
+		<script type = "text/javascript">
+			function validate_required(field,alerttxt){
+				with(field){
+					if(value == null || value == ""){
+						alert(alerttxt);
+						return false
+					}
+					else{
+						return true
+					}
+				}
+			}
+
+			function validate_form(thisform){
+				with(thisform){
+					if(validate_required(email,"Email must be filled out!") == false){
+						email.focus();
+						return false
+					}
+
+				}
+			}
+		</script>
+
+		<form action = "submitpage.htm" onsubmit = "return validate_form(this)" meth = "post">
+			Email:<input type = "text" name = "email" size = "30">
+			<input type = "submit" value = "Submit">
+		</form>
+
+		<br/>
+		<hr/>
+		<h1>Example 52 E-mail验证</h1>
+
+		<script type = "text/javascript">
+			function validate_email(field,alerttxt){
+				with(field){
+					apos = value.indexOf("@")
+					dotpos = value.lastIndexOf(".")
+					if(apos < 1 || dotpos - apos < 2){
+						alert(alerttxt);
+						return false
+					}
+					else{
+						return true
+					}
+				}
+			}
+
+			function validate_form(thisform){
+				with(thisform){
+					if(validate_email(email,"Not a valid e-mail address!") == false){
+						email.focus();
+						return false
+					}
+				}
+			}
+		</script>
+
+		<form action = "submitpage.htm" onsubmit = "return validate_form(this);" method = "post">
+			Email:<input type = "text" name = "email" size = "30" />
+			<input type = "submit" value = "Submit">
+
+		</form>
+	</body>
+
+</html>
