@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	</head>
+	<body onload = "checkCookies()">
+		<h1>Example1</h1>
+		<p id = "intro">Hello wrold!</p>
+		<p>本例演示<b>getElementBtId</b>方法！</p>
+
+		<script>
+			x = document.getElementById("intro");
+			document.write('<p>id = "intro" 的段落中的文本是：' + x.innerHTML + '</p>');
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example2</h1>
+		<p>Hello World!</p>
+
+		<div id = "main">
+			<p>The DOM is very useful.</p>
+			<p>本例演示<b>getElementByTagName</b>方法。</p>
+		</div>
+
+		<script>
+			var x = document.getElementById("main");
+			var y = x.getElementsByTagName("p");
+			document.write('id 为"main"的div中的第一段文本是：' + y[0].innerHTML);
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example3</h1>
+		<p>本例演示 JavaScript创建动态的HTML内容 </p>
+
+		<script>
+			document.write(Date());
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example4</h1>
+		<p>本例演示 用innerHTML属性修改HTML内容</p>
+
+		<p id = "p1">Hello World!</p>
+
+		<script>
+			document.getElementById("p1").innerHTML = "New text";
+		</script>
+
+		<p>上面的段落被一条JavaScript脚本修改了。</p>
+
+		<br/>
+		<hr/>
+		<h1>Example5</h1>
+
+		<p>本例演示 改变h2元素的内容 </p>
+
+		<h2 id = "header">Old Header</h2>
+
+		<script>
+			var element = document.getElemenrById("header");
+			element.innerHTML = "New Header";
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example6</h1>
+
+		<p>本例演示 JavaScript改变HTML元素的属性</p>
+
+		<img id = "image" src = "images/eg_tulip.jpg" />
+
+		<script>
+			document.getElementById("image").src = "images/eg_daisy.jpg";
+		</script>
+
+		<p>原始图片是郁金香（rg_tulip.jpg）,但是已经被修改为雏菊（eg_daisy.jpg）.</p>
+
+		<br/>
+		<hr/>
+		<h1>Example7</h1>
+
+		<p>本例演示 JavaScript改变HTML元素p的样式</p>
+
+		<p id = "p1">Hello World1!</p>
+		<p id = "p2">Hello World2!</p>
+
+		<script>
+			document.getElementById("p2").style.color = "red";
+			document.getElementById("p2").style.fontFamily = "Arial";
+			document.getElementById("p2").style.fontSize = "larger"
+		</script>
+
+		<p>上面的段落已经被一段脚本修改。</p>
+
+		<br/>
+		<hr/>
+		<h1>Example8</h1>
+
+		<p>本例演示 JavaScript改变id = "id1"的HTML元素的样式（当用户点击按钮时）</p>
+
+		<h1 id = "id1">I can be changed!</h1>
+		<button type = "button" onclick = "document.getElementById('id1').style.color = 'blue'">点我有惊喜</button>
+
+		<br/>
+		<hr/>
+		<h1>Example9</h1>
+		<p>本例演示：当用户在h1元素上点击时，会改变其内容</p>
+
+		<h1 onclick = "this.innerHTML = '谢谢配合！'">点我吧</h1>
+
+		<br/>
+		<hr/>
+		<h1>Example10</h1>
+		<p>本例演示；从事件处理器调用一个函数</p>
+
+		<h1 onclick = "changetext(this)">请点击该文本</h1>
+
+		<script>
+			function changetext(id){
+				id.innerHTML = "谢谢！";
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example11</h1>
+		<p>本例演示：使用事件属性向HTML元素分配事件</p>
+
+		<p>点击按钮就可以执行<em>displayDate()</em>函数</p>
+
+		<button onclick = "displayDate()">点击这里</button>
+
+		<script>
+			function displayDate(){
+				document.getElementById("demo").innerHTML = Date();
+			}
+		</script>
+
+		<p id = "demo"></p>
+
+		<br/>
+		<hr/>
+		<h1>Example12</h1>
+		<p>本例演示:HTML DOM允许通过使用JavaScript来向HTML元素分配事件</p>
+
+		<p>点击按钮就可以执行<em>displayDate1()</em>函数。</p>
+		<button id = "myBtn">点击这里</button>
+
+		<script>
+			document.getElementById("myBtn").onclick = function(){
+				displayDate1()
+			};
+
+			function displayDate1(){
+				document.getElementById("demo1").innerHTML = Date();
+			}
+		</script>
+
+		<p id = "demo1"></p>
+
+		<br/>
+		<hr/>
+		<h1>Example13</h1>
+		<p>本例演示：onload和onunload事件</p>
+
+		<script>
+			function checkCookies(){
+				if(navigator.cookieEnabled == true){
+					alert("已启用 cookie")
+				}
+				else{
+					alert("未启用 cookie")
+				}
+			}
+
+		</script>
+
+		<p>提示框会告诉你，浏览器是否已启用cookie</p>
+
+		<br/>
+		<hr/>
+		<h1>Example14</h1>
+		<p>本例演示：onchange事件</p>
+
+		<script>
+			function myFunction(){
+				var x = document.getElementById("fname");
+				x.value = x.value.toUpperCase();
+			}
+		</script>
+
+		请输入英文字符：<input type = "text" id = "fname" onchange = "myFunction()">
+		<p>当你离开输入字段时，会触发将输入文本转换为大写的函数。</p>
+
+		<br/>
+		<hr/>
+		<h1>Example15</h1>
+		<p>本例演示：onmouseover和onmouseout事件</p>
+
+		<div onmouseover = "mOver(this)" onmouseout = "mOut(this)" style = "background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;">把鼠标移到上面</div>
+
+		<script>
+			function mOver(obj){
+				obj.innerHTML = "Thank you!"
+			}
+			function mOut(obj){
+				obj.innerHTML = "把鼠标移到上面"
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example16</h1>
+		<p>本例演示：onmousedown、onmouseup以及onclick事件</p>
+
+		<div onmousedown = "mDown1(this)" onmouseup = "mUp1(this)" style = "background-color:green;color:#ffffff;width:90px;height:20px;padding:40px;font-size:12px;">请点击这里</div>
+
+		<script>
+			function mDown1(obj){
+				obj.style.backgroundColor = "#1ec5e5";
+				obj.innerHTML = "请释放鼠标按钮"
+			}
+			function mUp1(obj){
+				obj.style.backgroundColor = "green";
+				obj.innerHTML = "请按下鼠标按钮"
+			}
+		</script>
+
+		<br/>
+		<hr/>
+		<h1>Example17</h1>
+		<p>本例演示：如需向HTML DOM添加新元素，你必须首先创建该元素（元素节点），然后向一个已存在的元素追加该元素。</p>
+
+		<div id = "div1">
+			<p id = "p1">这是一个段落</p>
+			<p id = "p2">这是另一个段落</p>
+		</div>
+
+		<script>
+			var para = document.createElement("p");
+			var node = document.createTextNode("这是一个新段落。");
+			para.appendChild(node);
+
+			var element = document.getElementById("div1");
+			element.appendChild(para);
+		</script>
+
+
+
+	</body>
+</html>
